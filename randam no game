@@ -1,0 +1,21 @@
+import random
+no=int(input("choose a no in between 1to100"))
+winning=random.randint(1,100)
+game_over=False
+guess=1
+while not game_over:
+
+  if no==winning:
+    print(f"you win , you use {guess}")
+    game_over=True
+  else:
+    if no<winning:
+      print("too low")
+      no=int(input("chosse agin"))
+      guess=guess+1
+    else:
+      if no>winning:
+        print("too high")
+        no=int(input("chosse agin"))
+        guess=guess+1
+  
